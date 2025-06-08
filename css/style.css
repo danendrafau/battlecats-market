@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  padding: 20px;
+  background: #FEF3E2;
+  color: #333;
+}
+
+header, footer {
+  background: #1f1f1f;
+  color: #ffbe0b;
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+header h1{
+  font-size: 2rem;
+}
+
+.featured-image{
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  margin-top: 1rem;
+}
+
+nav ul a {
+  color: #fb5607;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav ul a:hover {
+  color: #ff006e;
+}
+
+main {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+article {
+  flex: 2;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+aside {
+  flex: 1;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.coupon-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.coupon {
+  background: #ffeecf;
+  padding: 1rem;
+  border-radius: 12px;
+  width: calc(33.33% - 1rem);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.coupon:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  background-color: #ffdfac;
+}
+
+.badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #ff006e;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+  main {
+    flex-flow: column nowrap;
+  }
+
+  main .coupon {
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    justify-content: center;
+  }
+
+  main .coupon {
+    align-self: stretch;
+  }
+}
